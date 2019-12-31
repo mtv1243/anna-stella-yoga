@@ -1,0 +1,411 @@
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Montserrat&display=swap')
+
+
+* {
+  box-sizing: border-box;
+}
+
+/* body styles */
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #060606;
+  margin: 0;
+  padding: 0;
+  font-weight: 100;
+}
+
+/* PARALLAX STYLES
+-------------------------- */
+
+.parallax {
+  /* SETS HEIGHT OF WINDOW */
+    height: 97vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    perspective: 1px;
+    background-color: #060606;
+}
+
+.parallax__layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+.parallax__layer--front {
+/*     -webkit-transform: translateZ(0); */
+    transform: translateZ(0);
+    /* overflow-y: scroll; */
+    /* margin-top: 100vh; */
+}
+
+.parallax__layer--back {
+/*     -webkit-transform: translateZ(-1px); */
+    transform: translateZ(-1px);
+}
+
+/* BASE STYLES
+--------------------------------- */
+
+.spacer {
+  padding-bottom: 150vh;
+}
+
+
+.content-BG {
+  background: #41295a;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(45deg, #41295a, #2f0743);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(45deg, #333333, #000);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  /* background-color: #060606; */
+  box-sizing: border-box;
+  padding-top: 20px;
+}
+
+.content-wrapper {
+  width: 70vw;
+  margin: auto;
+  padding-bottom: 50px;
+  color: #fff;
+  position: relative;
+}
+
+
+/* .arrow-wrapper {
+  position: absolute;
+  display: flex;
+  top: 100px;
+  justify-content: center;
+  color: #fff;
+  font-size: 13rem;
+  height: 20px;
+  width: 100vw;
+} */
+
+/* BIG PIC STYLES
+--------------------------------- */
+
+.header-image-wrapper {
+  padding-bottom: 10px;
+  transform: scale(2.5, 2.5);
+  overflow: hidden;
+  margin: auto;
+}
+
+.header-image {
+  width: 100vw;
+  margin: 0;
+}
+
+/* NAV AND LOGO styles
+------------------------------*/
+
+.sticky {
+  position: sticky;
+  top: 0;
+}
+
+.marquee-wrapper {
+  width: 100%;
+  height: 4em;
+  /* padding-bottom: 100vh; */
+}
+
+.marquee {
+  width: 90vw;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.logo, .logo h1 {
+  margin: 0;
+  padding-top: 10px;
+  font-weight: 300;
+  font-size: 16px;
+  color: #fff;
+}
+
+h1 {
+  /* padding-left: 1vw; */
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+  font-weight: 300;
+  padding: 0;
+  padding-right: 20px;
+  margin: 0;
+}
+
+nav a {
+  position: relative;
+  overflow: hidden;
+  width: 18vw;
+  text-decoration: none;
+  text-align: center;
+  flex-grow: 1;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+  margin-right: 1px;
+  margin-left: 1px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  /* font-weight: 300; */
+  background-color: rgba(255, 255, 255, 0);
+  /* transition: background-color .5s, font-weight .5s, color .5s; */
+}
+
+nav a:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  bottom: -5px;
+  left: 0;
+  background: #6E8BFF;
+  transform: translateY(0);
+  transition: transform 0.2s ease-out;
+}
+
+nav a:hover:after {
+  transform: translateY(-5px);
+}
+
+/* CONTENT styles
+--------------------------------------------- */
+
+section {
+  margin-bottom: 10rem;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+}
+
+/* ====================
+anna pic styles
+======================*/
+
+.anna_swing, .anna_portrait, .approach-pic, .testimonial-pic {
+  width: 100%;
+  padding-top: 20px;
+}
+
+.testimonial-img-wrapper {
+  margin-bottom: 40px;
+}
+
+.anna_portrait {
+  margin-bottom: 40px;
+}
+
+.aboutDescription, .testimonialDescription {
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.title-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid;
+}
+
+i.fas {
+  display: none;
+  font-size: 4.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  font-weight: 100;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 6rem;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  padding: 0;
+  margin: 0;
+  cursor: default;
+}
+
+.description {
+  display: inline-block;
+}
+
+.aboutDescription {
+  width: 80%;
+  margin: 40px auto;
+}
+
+#about {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*====================
+Contact section
+====================*/
+
+#contact {
+  width: 80%;
+  border: 0;
+  margin: 20px auto 80px auto;
+  text-align: center;
+}
+
+#contact>.title-wrapper {
+  border: 0;
+  display: flex;
+  justify-content: center;
+}
+
+#contact>.title-wrapper>h2.title {
+  font-size: 2rem;
+  border-bottom: 1px solid;
+  /* font-weight: 400; */
+  /* text-transform: none; */
+  display: inline;
+  text-align: center;
+}
+
+/*=======================
+fitness sections
+=========================*/
+
+#body-mind {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  /* margin-top: 75px; */
+}
+
+.fitness-title {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.fitness-body, .fitness-mind {
+  width: 35%;
+}
+
+.email {
+  font-weight: 600;
+}
+
+/*===================
+Approach Styles
+===================*/
+
+.testimonial-img-wrapper {
+  height: 500px;
+  overflow: hidden;
+}
+
+.approach-description {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+.approach-attribution {
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 20px;
+  text-align: right;
+}
+
+/*==================
+Testimonial styles
+====================*/
+
+#testimonials .attribution {
+  margin-top: 0px;
+}
+
+.test {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 80%;
+  margin: 20px auto;
+}
+
+.test-img-wrapper {
+  height: 100px;
+  min-width: 100px;
+  border-radius: 50%;
+  margin-right: 20px;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.test-img {
+  width: 100px;
+  /* height: 100px; */
+}
+
+.test-img-amanda {
+  height: 100px;
+  width: auto;
+}
+
+.attribution {
+  font-weight: 600;
+}
+
+/*===================
+contact-bottom
+====================*/
+
+.contact-bottom {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-bottom>.title-wrapper {
+  display: inline-block;
+}
+
+.contact-bottom>.title-wrapper>h2 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+/* footer styles
+--------------------------------- */
+
+footer {
+  font-size: 10px;
+  padding-top: 18vh;
+  /* padding-bottom: 3vh; */
+  text-align: center;
+  margin: auto;
+  width: 50vw;
+}
+
+footer > span {
+  display: inline-block;
+  padding-top: 10px;
+}
+
+.credit a {
+  color: #fff;
+}
