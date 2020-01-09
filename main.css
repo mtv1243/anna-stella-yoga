@@ -136,10 +136,14 @@ h1 {
   /* padding-left: 1vw; */
 }
 
+.nav-wrapper {
+  width: 50vw;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
-  width: 40%;
+  width: 100%;
   font-weight: 300;
   padding: 0;
   padding-right: 20px;
@@ -408,4 +412,145 @@ footer > span {
 
 .credit a {
   color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*==========================
+      Media Queries
+===========================*/
+@media only screen and (max-width: 426px) {
+
+  html {
+    /* transform: scale(1.05); */
+  }
+
+  .header-image-wrapper {
+    transform: scale(3,3);
+  }
+
+  /*====================
+        NAV
+  ====================*/
+
+  .nav-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  i.fa-bars {
+    display: initial;
+    color: #fff;
+    font-size: 1rem;
+  }
+
+  .nav-wrapper > nav {
+    position: absolute;
+    display: none;
+    top: 30px;
+    right: -25px;
+    flex-direction: column;
+    width: initial;
+  }
+
+  nav a {
+    width: initial;
+    padding: 15px;
+    font-weight: 600;
+    background-color: rgba(0,0,0,.8);
+  }
+
+/*=================*/
+  .spacer {
+    padding-bottom: 60vh;
+  }
+
+  .title-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+  }
+
+  h2.title {
+    font-size: 1.8rem;
+  }
+
+/*========================
+    body - mind
+========================*/
+  .content-wrapper {
+    width: 90vw;
+  }
+
+  section {
+    margin-bottom: 5rem;
+  }
+
+/*==============
+    body mind
+=================*/
+  #body-mind {
+    flex-direction: column;
+  }
+
+  #contact, .approach-description, .aboutDescription {
+    width: 100%;
+  }
+
+/*========
+approach
+==========*/
+
+  .approach-description {
+    padding-top: 0px;
+  }
+
+  .fitness-title {
+    font-size: 1.5rem;
+  }
+
+  .fitness-body, .fitness-mind {
+    width: 100%;
+  }
+
+  #contact>.title-wrapper>h2.title {
+    font-size: 1.8rem;
+  }
+
+/*images*/
+  .anna_portrait, .anna_swing {
+    width: 100%;
+  }
+
+  .testimonial-img-wrapper {
+    height: initial;
+  }
+
+  .testimonial-pic {
+    width: 145%;
+  }
+
+
+/*Testimoinals*/
+  .test {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .test-img-wrapper {
+    width: 100px;
+  }
 }

@@ -1,3 +1,8 @@
+//Mobile nav click event
+$('.fa-bars').click(()=>{
+  $('nav').slideToggle();
+})
+
 //scroll on menu click
 $("#menuItemThrive").click(()=>{
   $(".parallax").animate(
@@ -37,11 +42,16 @@ $("#menuItemApproach").click(()=>{
 
 // Blur the BIG PIC on scroll
 $('.parallax').scroll(function(){
-  console.log('scroll');
+  // console.log('scroll');
   let scroll = $('.parallax').scrollTop();
+  //blur image on scroll
   $('.header-image').css({
     filter: 'blur(' + (scroll/60) + 'px)'
   });
+  //fade nav on scroll
+  $('.marquee').css({
+    filter: 'opacity(' + (100 - (scroll-170)) + '%)'
+  })
 });
 
 // $('.sticky').scroll(function(){
